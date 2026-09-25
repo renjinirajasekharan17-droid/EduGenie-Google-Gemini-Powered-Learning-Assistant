@@ -1,0 +1,17 @@
+from fastapi import FastAPI
+
+app = FastAPI(title="EduGenie Learning Assistant")
+
+
+@app.get("/")
+def home():
+    return {
+        "message": "Welcome to EduGenie Learning Assistant!"
+    }
+
+
+@app.get("/health")
+def health():
+    return {
+        "status": "running"
+    }
